@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0056b3; /* A blue shade, common for official/educational sites */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: #004085 3px solid;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Updated main style */
+main {
+    padding: 20px;
+    max-width: 1000px; /* Increased max-width */
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Added */
+    flex-wrap: wrap; /* Added */
+}
+
+.content-area {
+    flex-grow: 1;
+    /* padding-right: 20px; Let's manage spacing with side-container's border/padding */
+}
+
+#diploma-info, #verification-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#diploma-info h2, #verification-details h2 {
+    color: #0056b3;
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+p strong {
+    color: #333;
+    margin-right: 8px;
+}
+
+span {
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* New .side-button-container styles */
+.side-button-container {
+    width: 220px; /* Fixed width for sidebar */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey, distinct from main content */
+    border-left: 1px solid #dee2e6; /* Separator line */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.side-button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 15px; /* Adjusted padding */
+    margin-bottom: 10px; /* Spacing between stacked buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem; /* Slightly adjusted font size */
+    transition: background-color 0.3s ease;
+    display: block; /* Make buttons take full width of container */
+    width: 100%;
+    text-align: center; /* Center text within button */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.side-button-container button:last-child {
+    margin-bottom: 0; /* No margin for the last button */
+}
+
+.side-button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* General Responsive adjustments (primarily for very small screens) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    /* main margin and padding are handled by the 768px breakpoint now,
+       but keeping specific small adjustments if needed */
+    main {
+        margin: 10px; /* Override for very small screens if 768px version is too large */
+        padding: 10px; /* Override for very small screens */
+    }
+    #diploma-info h2, #verification-details h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Responsive adjustments for layout stacking */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack items vertically */
+        padding: 15px; /* Adjust padding for tablet/mobile */
+        margin: 15px auto;
+    }
+
+    .content-area {
+        padding-right: 0; /* Reset padding, not needed when stacked */
+    }
+
+    .side-button-container {
+        width: 100%; /* Full width on small screens */
+        border-left: none; /* Remove side border */
+        border-top: 1px solid #dee2e6; /* Add top border for separation */
+        margin-top: 20px; /* Add some space above */
+        padding: 15px; /* Adjust padding for smaller view */
+    }
+
+    .side-button-container button {
+        padding: 10px 15px; /* Adjust button padding for smaller view */
+    }
+}
+
+/* Removed the old commented out @media (min-width: 768px) block */
